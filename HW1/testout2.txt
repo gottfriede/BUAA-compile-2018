@@ -1,0 +1,10 @@
+18373584
+Luogu_P1086 pick peanut\n
+input mxn area and time k, output max peanut it can pick
+max number : 37
+done
+done
+done
+done
+done
+done

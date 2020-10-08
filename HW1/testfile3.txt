@@ -1,0 +1,47 @@
+void main()
+{
+    const int N = 100, K = -1;
+    const char a = 'a';
+    char s[100],c;
+    int num[26]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    int m,i;
+    int maxn = 0;
+	int minn = 101;
+	int maxc,minc;
+	
+	printf("18373584");
+	printf("Luogu_P1125 noob monkey\n");
+	printf("input a word,output max and min char");
+	
+    scanf(m);
+    for (i=1;i<=m;i=i+1)
+    {
+        scanf(c);
+        s[i] = c;
+        num[c-a] = num[c-a] + 1;
+    }
+    for (i=25;i>=0;i=i-1)
+    {
+		if (num[i]!=0)
+		{
+			if (num[i] > maxn)
+			{
+				maxn = num[i];
+				maxc = i;
+			}
+			if (num[i] < minn)
+			{
+				minn = num[i];
+				minc = i;
+			}
+		}
+    }
+	printf("maxc : ",maxc);
+	printf("maxn : ",maxn);
+    printf("minc : ",minc);
+    printf("minn : ",minn);
+
+	printf("done");
+	printf("done");
+	printf("done");
+}

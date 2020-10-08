@@ -1,0 +1,50 @@
+const int NN_NN=100005;
+int a[100005];
+void quicksort(int l,int r)
+{
+	int i,j,t;
+	int mid;
+	i = l;
+	j = r;
+	mid=a[(i+j)/2];
+	while (i<=j)
+	{
+		while (a[i]<mid) i=i+1;
+		while (a[j]>mid) j=j-1;
+		if (i<=j)
+		{
+			t = a[i];
+			a[i]=a[j];
+			a[j]=t;
+			i=i+1;
+			j=j-1;
+		}
+	}
+	if (i<r) quicksort(i,r);
+	if (j>l) quicksort(l,j);
+}
+void main()
+{
+	int n;
+	int i;
+	int temp;
+	printf("18373584");
+	printf("Luogu_P1177 quicksort\n");
+	printf("input number and array, output sortted array");
+	scanf(n);
+	for (i=1;i<=n;i=i+1)
+	{
+		scanf(temp);
+		a[i] = temp;
+	}
+	quicksort(1,n);
+	for (i=1;i<=n;i=i+1)
+		printf(a[i]);
+	printf("done");
+	printf("done");
+	printf("done");
+	printf("done");
+	printf("done");
+	printf("done");
+	return;
+}

@@ -1,0 +1,14 @@
+18373584
+Luogu_P1177 quicksort\n
+input number and array, output sortted array
+1
+2
+4
+4
+5
+done
+done
+done
+done
+done
+done

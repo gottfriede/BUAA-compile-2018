@@ -1,0 +1,70 @@
+const int NN=+23;
+int n,m,k;
+int ans=0;
+int pn[23][23];
+int abs(int x)
+{
+	if (x>=0)
+		return (x);
+	else return (-x);
+}
+void solve(int x,int y,int resttime)
+{
+	int nextm=0;
+	int x1,y1,i,j;
+	int tottime;
+	for (i=1;i<=n;i=i+1)
+		for (j=1;j<=n;j=j+1)
+			if (pn[j][i]>nextm)
+			{
+				nextm=pn[j][i];
+				x1=j;
+				y1=i;
+			}
+	tottime = abs(x-x1)+abs(y1-y)+y1+1;
+	if (tottime<=resttime) 
+	{
+		ans=ans + nextm;
+		pn[x1][y1]=0;
+		solve(x1,y1,resttime-tottime+y1);
+	}
+}
+void main()
+{
+	int x0,y0,i,j,temp;
+	int maxn=0;
+	printf("18373584");
+	printf("Luogu_P1086 pick peanut\n");
+	printf("input mxn area and time k, output max peanut it can pick");
+	scanf(m);
+	scanf(n);
+	scanf(k);
+	for (i=1;i<=m;i=i+1)
+		for (j=1;j<=n;j=j+1)
+		{
+			scanf(temp);
+			pn[j][i] = temp;
+			if (pn[j][i]>maxn)
+			{
+				x0=j;
+				y0=i;
+				maxn=pn[j][i];
+			}
+			else
+			{}
+		}
+	if (2*y0+1<=k)
+	{
+		ans= ans + pn[x0][y0];
+		pn[x0][y0]=0;
+		solve(x0,y0,k-y0-1);
+	}
+	
+	printf("max number : ",ans);
+	printf("done");
+	printf("done");
+	printf("done");
+	printf("done");
+	printf("done");
+	printf("done");
+}

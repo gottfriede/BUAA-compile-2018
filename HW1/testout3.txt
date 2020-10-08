@@ -1,0 +1,10 @@
+18373584
+Luogu_P1125 noob monkey\n
+input a word,output max and min char
+maxc : 4
+maxn : 12
+minc : 0
+minn : 1
+done
+done
+done
